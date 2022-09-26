@@ -210,3 +210,5 @@ setup.py
 docs/site/*
 
 datum_bot*
+
+.env
