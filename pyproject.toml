@@ -1,6 +1,6 @@
 [project]
 name = 'datum'
-requires-python = '>=3.7'
+requires-python = '>=3.8'
 
 [tool.coverage.run]
 source = ['bot']
