@@ -16,14 +16,14 @@ async def test_progress_callback_builder():
 
 @patch('bot.bot.YoutubeDL')
 async def test_download_video(youtube_mock: MagicMock):
-    youtube_mock.return_value.__enter__.return_value.prepare_filename.return_value = 'test_filename'
-    filename = download_video('test_url')
-    assert filename == 'test_filename'
+    youtube_mock.return_value.__enter__.return_value.prepare_filename.return_value = 'temp_dir/test_filename'
+    filename = download_video('test_url', 'temp_dir')
+    assert filename == 'temp_dir/test_filename'
 
 @patch('bot.bot.YoutubeDL')
 async def test_download_video_fail(youtube_mock: MagicMock):
     youtube_mock.return_value.__enter__.return_value = Exception
-    filename = download_video('test_url')
+    filename = download_video('test_url', 'temp_dir')
     assert not filename
 
 @patch('bot.bot.mp.VideoFileClip')

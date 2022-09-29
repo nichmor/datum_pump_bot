@@ -13,9 +13,9 @@ def progress_callback_builder(message_to_edit: Message):
     return _callback
 
 
-def download_video(url: str) -> Optional[str]:
+def download_video(url: str, tmp_dir:str) -> Optional[str]:
     try:
-        with YoutubeDL() as dl:
+        with YoutubeDL(params={'outtmpl': f'{tmp_dir}/%(title)s.%(ext)s'}) as dl:
             info = dl.extract_info(url, download=True)
             return dl.prepare_filename(info)
     except Exception as e:
