@@ -40,6 +40,8 @@ pyrogram==2.0.57
     # via datum (pyproject.toml)
 pysocks==1.7.1
     # via pyrogram
+python-dotenv==0.21.0
+    # via datum (pyproject.toml)
 requests==2.28.1
     # via moviepy
 tgcrypto==1.2.3
