@@ -1,7 +1,24 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = 'datum'
 requires-python = '>=3.8'
+version = "0.0.1"
 
+dependencies = [
+    "pyrogram~=2.0.54",
+    "tgcrypto~=1.2.3",
+    "yt-dlp~=2022.9.1",
+    "moviepy~=1.0.3",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest~=7.1.3",
+    "coverage~=6.4.4",
+]
 [tool.coverage.run]
 source = ['bot']
 branch = true
