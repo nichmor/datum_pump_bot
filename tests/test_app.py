@@ -6,7 +6,6 @@ from pyrogram.types import Message
 from unittest.mock import AsyncMock, MagicMock, patch
 
 from bot.app import echo, download_youtube
-from tests.conftest import app as test_app
 
 
 
