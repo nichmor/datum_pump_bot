@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 
 def test_config_is_initialized():
     from bot.config import API_ID, API_HASH, BOT_TOKEN
